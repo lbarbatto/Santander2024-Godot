@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wk2i0qx46xo5"]
+[gd_scene load_steps=8 format=3 uid="uid://wk2i0qx46xo5"]
 
 [ext_resource type="FontFile" uid="uid://da3h3cv4m2cnj" path="res://src/font/Sono-ExtraBold.ttf" id="1_3muf4"]
 [ext_resource type="Script" path="res://scripts/gui.gd" id="1_3oqsb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cwhryfku3phv5" path="res://src/gui/Asset 4.png" id="4_rqwaq"]
 [ext_resource type="Texture2D" uid="uid://blxryqnhn0s1n" path="res://src/gui/Layer 1.png" id="5_dymmn"]
 [ext_resource type="Texture2D" uid="uid://ub6uwct35j4" path="res://src/gui/Layer 2.png" id="6_gyvou"]
+[ext_resource type="Texture2D" uid="uid://df7twdhjjj8hu" path="res://src/gui/quit.png" id="7_xwysv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -104,6 +105,8 @@ offset_top = 72.0
 offset_right = -163.0
 offset_bottom = 88.0
 mouse_default_cursor_shape = 2
+min_value = -40.0
+max_value = 5.0
 
 [node name="som" type="TextureButton" parent="."]
 layout_mode = 0
@@ -116,7 +119,7 @@ toggle_mode = true
 texture_normal = ExtResource("3_trlhe")
 texture_pressed = ExtResource("4_rqwaq")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="pause" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = -140.0
 offset_top = 25.0
@@ -127,3 +130,18 @@ mouse_default_cursor_shape = 2
 toggle_mode = true
 texture_normal = ExtResource("5_dymmn")
 texture_pressed = ExtResource("6_gyvou")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 25.0
+offset_right = 63.0
+offset_bottom = 163.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_xwysv")
+
+[connection signal="value_changed" from="volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="som" to="." method="_on_som_pressed"]
+[connection signal="button_down" from="pause" to="." method="_on_pause_button_down"]
+[connection signal="button_up" from="pause" to="." method="_on_pause_button_up"]
+[connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]

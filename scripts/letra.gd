@@ -21,6 +21,7 @@ func _ready():
 
 
 func _process(_delta):
+	volume_global()
 	game_status = Global.game_status
 	match game_status:
 		# PAUSE
@@ -73,4 +74,9 @@ func sorteiaLetra():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		marca_ponto()
+		
+func volume_global():
+	hurt.volume_db = Global.volume_global
+	coin.volume_db = Global.volume_global
+	broke.volume_db = Global.volume_global
 	

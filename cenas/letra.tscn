@@ -246,7 +246,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jss81"]
 radius = 4.81109
 
-[node name="letra" type="RigidBody2D"]
+[node name="letra" type="RigidBody2D" groups=["letras"]]
 collision_layer = 8
 collision_mask = 3
 max_contacts_reported = 1
@@ -267,13 +267,13 @@ shape = SubResource("CircleShape2D_jss81")
 [node name="particulaLetra" parent="." instance=ExtResource("28_v7cxs")]
 position = Vector2(0, -40)
 
-[node name="hurt" type="AudioStreamPlayer2D" parent="."]
+[node name="hurt" type="AudioStreamPlayer2D" parent="." groups=["audio"]]
 stream = ExtResource("29_j3m1f")
 
-[node name="coin" type="AudioStreamPlayer2D" parent="."]
+[node name="coin" type="AudioStreamPlayer2D" parent="." groups=["audio"]]
 stream = ExtResource("30_r6tby")
 
-[node name="broke" type="AudioStreamPlayer2D" parent="."]
+[node name="broke" type="AudioStreamPlayer2D" parent="." groups=["audio"]]
 stream = ExtResource("31_05ech")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

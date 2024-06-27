@@ -14,11 +14,11 @@ var dead = false
 
 
 func _physics_process(_delta):
+	volume_global()
 	game_status = Global.game_status
 	match game_status:
 		#PAUSE
 		0:
-			queue_free()
 			pass
 		# PLAY
 		1:
@@ -65,3 +65,6 @@ func morte():
 func _on_anim_animation_finished():
 	modulate = "#ffffff"
 	hurt = false
+	
+func volume_global():
+	die.volume_db = Global.volume_global
