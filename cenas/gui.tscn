@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://wk2i0qx46xo5"]
+
+[ext_resource type="FontFile" uid="uid://da3h3cv4m2cnj" path="res://src/font/Sono-ExtraBold.ttf" id="1_3muf4"]
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_3oqsb"]
+[ext_resource type="Texture2D" uid="uid://dbj7hk4fcj8j6" path="res://src/gui/Asset 5.png" id="3_trlhe"]
+[ext_resource type="Texture2D" uid="uid://cwhryfku3phv5" path="res://src/gui/Asset 4.png" id="4_rqwaq"]
+[ext_resource type="Texture2D" uid="uid://blxryqnhn0s1n" path="res://src/gui/Layer 1.png" id="5_dymmn"]
+[ext_resource type="Texture2D" uid="uid://ub6uwct35j4" path="res://src/gui/Layer 2.png" id="6_gyvou"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+script = ExtResource("1_3oqsb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -450.0
+offset_bottom = 110.0
+color = Color(1, 0.627451, 0, 1)
+
+[node name="Tempo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -430.0
+offset_top = 8.0
+offset_right = -370.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "Tempo:"
+
+[node name="Label_Tempo" type="Label" parent="Tempo"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 140.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "0"
+horizontal_alignment = 2
+
+[node name="Pontos" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -430.0
+offset_top = 41.0
+offset_right = -360.0
+offset_bottom = 64.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "Pontos:"
+
+[node name="Label_Pontos" type="Label" parent="Pontos"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 140.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "0"
+horizontal_alignment = 2
+
+[node name="Vidas" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -430.0
+offset_top = 74.0
+offset_right = -370.0
+offset_bottom = 97.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "Vidas:"
+
+[node name="Label_Vidas" type="Label" parent="Vidas"]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 140.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3muf4")
+text = "0"
+horizontal_alignment = 2
+
+[node name="volume" type="HSlider" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -263.0
+offset_top = 72.0
+offset_right = -163.0
+offset_bottom = 88.0
+mouse_default_cursor_shape = 2
+
+[node name="som" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -220.0
+offset_top = 15.0
+offset_right = -88.0
+offset_bottom = 265.0
+scale = Vector2(0.2, 0.2)
+toggle_mode = true
+texture_normal = ExtResource("3_trlhe")
+texture_pressed = ExtResource("4_rqwaq")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -140.0
+offset_top = 25.0
+offset_right = 116.0
+offset_bottom = 281.0
+scale = Vector2(0.2, 0.2)
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("5_dymmn")
+texture_pressed = ExtResource("6_gyvou")

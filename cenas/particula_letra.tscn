@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ugxdvv6b5wk4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mwqwa"]
+
+[node name="particulaLetra" type="CPUParticles2D"]
+modulate = Color(1, 0.509804, 0.294118, 0.784314)
+material = SubResource("CanvasItemMaterial_mwqwa")
+scale = Vector2(1e-05, 1e-05)
+emitting = false
+amount = 3
+lifetime = 0.6
+one_shot = true
+speed_scale = 2.0
+spread = 15.0
+gravity = Vector2(0, -1000)
+angular_velocity_min = -180.0
+angular_velocity_max = 180.0
+orbit_velocity_min = -1.0
+orbit_velocity_max = 1.0
+radial_accel_min = -10.0
+radial_accel_max = 10.0
+tangential_accel_min = -10.0
+tangential_accel_max = 10.0
+scale_amount_min = 8.0
+scale_amount_max = 32.0
